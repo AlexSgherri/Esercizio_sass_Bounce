@@ -11,6 +11,19 @@ $ball-size: 5rem;
     0% {
       bottom: $position-start;
     }
+    1% {
+        width: 7rem;
+      height: 3rem;
+    }
+
+    3% {
+        width: 6rem;
+        height: 4rem;
+    }
+    6% {
+        width: $ball-size;
+        height: $ball-size;
+    }
     100% {
     bottom: $position-end;
     }
