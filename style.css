@@ -1,0 +1,50 @@
+.wrapper {
+  height: 100vh;
+}
+
+.wrapper .terrain {
+  margin: auto;
+  height: 50%;
+  width: 50%;
+  border-bottom: 5px solid green;
+  background-color: lightblue;
+  position: relative;
+}
+
+.wrapper .terrain .ball {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background-color: red;
+  position: absolute;
+  left: 50%;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-name: bounce;
+          animation-name: bounce;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    bottom: 0%;
+  }
+  100% {
+    bottom: 50%;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    bottom: 0%;
+  }
+  100% {
+    bottom: 50%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,44 @@
+$terrain-color: green;
+$object-color: red;
+$ball-size: 5rem;
+
+
+@mixin start-end($position-start, $position-end) {
+    animation-duration: 0.5s;
+    animation-name:bounce;
+    animation-iteration-count: infinite;
+  @keyframes bounce {
+    0% {
+      bottom: $position-start;
+    }
+    100% {
+    bottom: $position-end;
+    }
+  }
+}
+
+.wrapper {
+  height: 100vh;
+
+  .terrain {
+    margin: auto;
+    height: 50%;
+    width: 50%;
+    border-bottom: 5px solid $terrain-color;
+    background-color: lightblue;
+    position: relative;
+
+    .ball {
+      width: $ball-size;
+      height: $ball-size;
+      border-radius: 50%;
+      background-color: $object-color;
+      position: absolute;
+      left: 50%;
+      animation-direction: alternate;
+      transform: translateX(-50%);
+      @include start-end(0%, 50%);
+    }
+
+  }
+}
