@@ -25,7 +25,7 @@ $ball-size: 5rem;
         height: $ball-size;
     }
     100% {
-    bottom: $position-end;
+    bottom: $position-start + $position-end;
     }
   }
 }
@@ -39,7 +39,14 @@ $ball-size: 5rem;
     width: 50%;
     border-bottom: 5px solid $terrain-color;
     background-color: lightblue;
-    position: relative;
+    position:relative;
+
+    .square {
+      width: $ball-size;
+      height: $ball-size;
+      margin-left: 50px;
+     border:1px solid yellow;
+    }
 
     .ball {
       width: $ball-size;
